@@ -1,6 +1,7 @@
 package com.coveros.selenium_hello_world5;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -68,7 +69,7 @@ public class SeleniumMain {
         // Find the text input element by its name
         WebElement element = driver.findElement(By.tagName("h2"));
         String result = element.getText();
-        if (result.contains("Hello World! The even number is:")){
+        if (result.contains("Hello World!The even number is:")){
         	System.out.println("It's working!");
         	System.out.println(result);
         	System.exit(0);
