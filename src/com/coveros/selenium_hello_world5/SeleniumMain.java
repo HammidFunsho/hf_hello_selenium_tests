@@ -60,10 +60,10 @@ public class SeleniumMain {
             // ex.printStackTrace();
         }
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		WebDriver driver = new RemoteWebDriver(new URL("http://"+DNS+"4444/wd/hub"), capability);
+		WebDriver driver = new RemoteWebDriver(new URL("http://ec2-54-87-132-41.compute-1.amazonaws.com:4444/wd/hub"), capability);
 		
 		// And now use this to visit the app
-        driver.get("http://"+DNS+":8080/hello_world5-"+appVersion+"/");
+        driver.get("http://" +DNS+":8080/hello_world5-"+ appVersion+ "/");
 
         // Find the text input element by its name
         WebElement element = driver.findElement(By.tagName("h2"));
